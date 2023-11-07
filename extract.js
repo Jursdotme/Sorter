@@ -6,16 +6,18 @@ const colors = require('colors'),
   args = require('minimist')(process.argv.slice(2)),
   // local constants
   log_error = require('console').error,
-  overwrite = true
+  overwrite = true,
+  sourceDir = args.src,
+  targetDir = args.trg;
 
 
-// switch (true) {
-//   case !!sourceDir && !!targetDir:
-//     parseDirectory(sourceDir);
-//     break;
-//   default:
-//     error(new Error('Missing a required argument. Make sure to include both --src and --trg'));
-// }
+switch (true) {
+  case !!sourceDir && !!targetDir:
+    parseDirectory(sourceDir);
+    break;
+  default:
+    error(new Error('Missing a required argument. Make sure to include both --src and --trg'));
+}
 
 function checkFileExistence(dir, fileName) {
   //assume the file exists until proven wrong

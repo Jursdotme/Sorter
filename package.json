@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "sort": "node sort.js nilfisk",
-    "extract": "node extract.js --src=nilfisk --trg=sorted/nilfisk --clbr"
+    "sort": "node sort.js sorted/Weather Module",
+    "extract": "flatten-directory --rootdir=\"unsorted/Weather Module\" --outputdir=\"sorted/Weather Module\""
   },
   "author": "Rasmus Jürs",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.1.2",
     "enquirer": "^2.4.1",
+    "flatten-directory": "^1.0.8",
     "minimist": "^1.2.0",
     "mv": "^2.1.1"
   }

@@ -6,11 +6,28 @@ const path = require("path");
  * @const {Object}
  */
 const FILE_EXTENSIONS = {
+  Arkiver: [
+    ".zip",
+    ".rar",
+    ".7z",
+    ".gz",
+  ],
   Foto: [
     ".jpg",
     ".jpeg",
     ".jpe",
     ".webp",
+    ".tiff",
+    ".tif",
+  ],
+  Raw: [
+    ".cr2",
+    ".nef",
+    ".dng",
+    ".arw",
+    ".orf",
+    ".rw2",
+    ".raf",
   ],
   Grafik: [
     ".png",
@@ -37,6 +54,8 @@ const FILE_EXTENSIONS = {
     ".fig",
     ".indd",
     ".afdesign",
+    ".afphoto",
+    ".afpub",
   ],
   Video: [
     ".webm",
@@ -62,6 +81,7 @@ const FILE_EXTENSIONS = {
     ".ppt",
     ".pptx",
     ".txt",
+    ".md",
   ],
   Pdf: [
     ".pdf",
@@ -72,11 +92,15 @@ const FILE_EXTENSIONS = {
     ".css",
     ".php",
     ".js",
+    ".jsx",
+    ".ts",
+    ".asp",
   ],
   Data: [
     ".json",
     ".xml",
     ".csv",
+    ".sql",
   ],
   Executable: [
     ".exe",
@@ -96,7 +120,7 @@ if (!INPUT_DIR) {
   process.exit(1);
 }
 
-CURRENT_DIR = 'unsorted/' + INPUT_DIR;
+CURRENT_DIR = INPUT_DIR;
 
 
 /**
