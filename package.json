@@ -1,0 +1,19 @@
+{
+  "name": "sorter",
+  "version": "1.0.0",
+  "description": "Sort files for achiving",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "sort": "node sort.js nilfisk",
+    "extract": "node extract.js --src=nilfisk --trg=sorted/nilfisk --clbr"
+  },
+  "author": "Rasmus Jürs",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "enquirer": "^2.4.1",
+    "minimist": "^1.2.0",
+    "mv": "^2.1.1"
+  }
+}
